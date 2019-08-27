@@ -1,5 +1,5 @@
 body{
-    background: black;
+    background-color: black;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
@@ -72,6 +72,14 @@ button:hover:not(.circle){
 
 .fade-in{
     opacity: 1;
+}
+
+path{
+    fill: none;
+    stroke: white;
+    stroke-width: 50px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 @keyframes rotate {
