@@ -20,18 +20,21 @@ function btnClick () {
         loader.classList.add('fade-in');
     }, 500);
 
-    /*for(let i = 400; i < 800; i += 10){
-        checkIconPath.style.strokeDashoffset = i;
-    }*/
+    setTimeout(function() {
+        loader.classList.remove('fade-in');
+        loader.addEventListener('transitionend', paintCheck);
+    }, 3000 + Math.random() * 1500);
 
-    var count = 0;
-    var intervalId = setInterval(function() {
-        checkIconPath.style.strokeDashoffset = count + 400;
-        count += 10;
-        if(count >= 400){
-            clearInterval(intervalId);
-        }
-    }, 16);
+    function paintCheck() {
+        var count = 0;
+        var intervalId = setInterval(function() {
+            checkIconPath.style.strokeDashoffset = count + 400;
+            count += 10;
+            if(count >= 400){
+                clearInterval(intervalId);
+            }
+        }, 16);
+    }
 }
 
 btn.addEventListener('click', btnClick);
