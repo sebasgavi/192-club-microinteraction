@@ -74,12 +74,21 @@ button:hover:not(.circle){
     opacity: 1;
 }
 
-path{
+.check-icon{
+    position: absolute;
+    width: 70%;
+    height: auto;
+    top: 15px;
+    left: 9px;
+}
+.check-icon path{
     fill: none;
     stroke: white;
     stroke-width: 50px;
     stroke-linecap: round;
     stroke-linejoin: round;
+    stroke-dasharray: 400 400;
+    stroke-dashoffset: 400;
 }
 
 @keyframes rotate {
